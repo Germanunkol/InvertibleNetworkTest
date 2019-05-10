@@ -13,7 +13,7 @@ class InvertibleBlock( nn.Module ):
         self.permInverse = torch.argsort(self.perm)
 
         #self.extreme = torch.FloatTensor( [10] ).cuda()
-        self.extreme = torch.FloatTensor( [1e9] ).cuda()
+        self.extreme = torch.FloatTensor( [1e2] ).cuda()
 
     def forward(self, u):
         bs = u.shape[0]
